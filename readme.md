@@ -1,4 +1,4 @@
-**Simple Node JS application**
+**Simple Restful Api Node JS application**
 
 To start the application run
 
