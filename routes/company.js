@@ -40,7 +40,7 @@ router.get('/',function(req,res,next){
 	var size  = req.query.size || config.query_limit;
 	var key   = req.query.sort_by;
 
-	sort[key]  = 1;
+	sort[key]  = -1;
 	// var param = req.
 	console.log(req.query);
 
@@ -65,7 +65,7 @@ router.get('/:company_id',function(req, res,next){
 
 router.put('/',function(req,res,next){
 	var params = req.body;
-	req.checkParams({
+	req.checkBody({
 		company_id : {notEmpty : true}
 	});
 	var error = req.validationErrors();

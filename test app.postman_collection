@@ -1,0 +1,393 @@
+{
+	"variables": [],
+	"info": {
+		"name": "test app",
+		"_postman_id": "f03e9281-e40a-c840-a2cd-eb2fe56c0593",
+		"description": "This is the postman collection for the test app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Company",
+					"request": {
+						"url": "127.0.0.1:3000/v1/company/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "x-access-token",
+								"value": "abcdefghigos1233gsas",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test company",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "description",
+									"value": "We are working towards a better future",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "year_founded",
+									"value": "1996",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_name",
+									"value": "Mr Sam",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_email",
+									"value": "demo@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "num_employees",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "financial",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "team",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "idea",
+									"value": "20",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "It requires the x-access-token as a way of authorizing the admin to be the only one to be able to create company."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company ",
+					"request": {
+						"url": "127.0.0.1:3000/v1/company/?sort_by=team&size=10",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "abcdefghigos1233gsas",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test company",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "description",
+									"value": "We are working towards a better future",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "year_founded",
+									"value": "1996",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_name",
+									"value": "Mr Sam",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_email",
+									"value": "demo@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "num_employees",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "Size and sort query params"
+					},
+					"response": []
+				},
+				{
+					"name": "Get  a specific company details",
+					"request": {
+						"url": "127.0.0.1:3000/v1/company/25/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "abcdefghigos1233gsas",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test company",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "description",
+									"value": "We are working towards a better future",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "year_founded",
+									"value": "1997",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_name",
+									"value": "Mr Sam",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_email",
+									"value": "demo@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "num_employees",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "company_id",
+									"value": "25",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "the compulsory param is localhost:3000/company/<company_id>/"
+					},
+					"response": []
+				},
+				{
+					"name": "update company details",
+					"request": {
+						"url": "127.0.0.1:3000/v1/company/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "abcdefghigos1233gsas",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test company",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "description",
+									"value": "We are working towards a better future",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "year_founded",
+									"value": "1997",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_name",
+									"value": "Mr Sam",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "contact_email",
+									"value": "demo@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "num_employees",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "company_id",
+									"value": "25",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "the param <company_id> is needed, all other params are optional"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a company ",
+					"request": {
+						"url": "127.0.0.1:3000/v1/company/17/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "abcdefghigos1233gsas",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Delete a company using using <company_id> param"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Create users",
+					"request": {
+						"url": "127.0.0.1:3000/v1/users/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "sameul",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "omidiora",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "samparsky",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "email",
+									"value": "samparsky1@gmail.com",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "Create a user all params are required"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"url": "127.0.0.1:3000/v1/users/login/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "samparsky",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "email",
+									"value": "samparsky@gmail.com",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "This generates the token used to authenticate the user when performing the get /merchant operation"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

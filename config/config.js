@@ -14,7 +14,7 @@ var config = {
 		222 : "Could not update",
 		223 : "Could find user",
 	},
-	admin_secret_key : "gagdsgagsdgagsgasgagsgagssg",
+	admin_secret_key : "abcdefghigos1233gsas",
 };
 
 module.exports = config;
